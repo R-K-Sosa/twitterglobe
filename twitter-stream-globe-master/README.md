@@ -57,7 +57,7 @@ Go to [http://localhost:3000](http://localhost:3000) in your browser.
 
 Deploying
 ---
-This application is ready to run on a free Cloud Foundry, OpenShift or Heroku account.
+This application is ready to run on Heroku.
 
 **Heroku**
 
@@ -69,34 +69,6 @@ Before deploying to Heroku, set your environment [config vars](https://devcenter
 
 Tip: Managing the Twitter stream is more appropriately accomplished with a worker or background job. See this [gist](https://gist.github.com/stephenlb/36aef15a165d5bad0d82) for setting up a Twitter / PubNub [worker on Heroku](https://devcenter.heroku.com/articles/background-jobs-queueing). 
 
-
-
-
-**OpenShift**
-
-You can deploy to OpenShift with [`rhc`](https://github.com/openshift/rhc), by adding your own keys to the following command:
-
-```
-rhc app create twglobe nodejs-0.10 \
-  --from-code=http://github.com/twitterdev/twitter-stream-globe.git \
-  NODE_ENV=production \
-  TWITTER_CONSUMER_KEY=YOUR_TWITTER_CONSUMER_KEY \
-  TWITTER_CONSUMER_SECRET=YOUR_TWITTER_CONSUMER_SECRET \
-  TWITTER_ACCESS_TOKEN=YOUR_TWITTER_ACCESS_TOKEN \
-  TWITTER_TOKEN_SECRET=YOUR_TWITTER_TOKEN_SECRET \
-  PUBNUB_PUBLISH_KEY=YOUR_PUBNUB_PUBLISH_KEY \
-  PUBNUB_SUBSCRIBE_KEY=YOUR_PUBNUB_SUBSCRIBE_KEY
-```
-
-**Cloud Foundry**
-
-You can deploy to a Cloud Foundry instance with the [`cf`](http://docs.cloudfoundry.org/devguide/installcf/install-go-cli.html) command line tool.
-
-Edit out the line for Compass support (see above) in `app.js`.
-
-Copy `manifest.sample.yml` to `manifest.yml`, edit the application name, and then insert your Twitter and PubNub API keys.
-
-Run `cf push` to deploy and start the app on Cloud Foundry.
 
 Resources
 ----
