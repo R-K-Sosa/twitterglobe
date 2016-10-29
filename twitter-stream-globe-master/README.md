@@ -66,7 +66,7 @@ Resources
 - [AngularJS](https://angularjs.org/)
 - [PubNub AngularJS SDK](https://github.com/pubnub/pubnub-angular)
 - [Three.js](http://threejs.org/)
-- Code Cited
-- Adapted From: https://github.com/twitterdev/twitter-stream-globe
-- Retrieved: October 29, 2016
-- Based On: https://integrity.mit.edu/handbook/writing-code
+- // Code adapted from:
+- // https://github.com/twitterdev/twitter-stream-globe
+- // Based On: https://integrity.mit.edu/handbook/writing-code
+- (Source: Google Chrome source code https://github.com/twitterdev/twitter-stream-globe retrieved in October 2016.)
