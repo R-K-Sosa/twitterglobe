@@ -69,7 +69,7 @@ Resources
 - // Code adapted from:
 - // https://github.com/twitterdev/twitter-stream-globe
 - // Based On: https://integrity.mit.edu/handbook/writing-code
-- // Copyright (c) 2012 The Chromium Authors. All rights reserved.
-- // Use of this source code is governed by a BSD-style license that can be
+- // Copyright (c) 2014 Twitter Inc. All rights reserved.
+- // Use of this source code is governed by The MIT License (MIT) that can be
 - // found in the LICENSE file.
 - (Source: Google Chrome source code https://github.com/twitterdev/twitter-stream-globe retrieved in October 2016.)
