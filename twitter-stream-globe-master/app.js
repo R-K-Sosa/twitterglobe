@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 
 // express middleware
 // comment the next line if NOT using Compass / deploying to Cloud Foundry
-app.use(require('node-compass')({mode: 'compress'}));
+//app.use(require('node-compass')({mode: 'compress'}));
 
 app.use(favicon(__dirname + '/public/images/Twitter_logo_blue_small.png'));
 app.use(logger('dev'));
