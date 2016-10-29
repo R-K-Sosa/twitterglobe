@@ -18,7 +18,7 @@ Install [Node.js](http://nodejs.org/).
 Clone GitHub repo:
 
 ```
-https://github.com/twitterdev/twitter-stream-globe.git
+https://github.com/R-K-Sosa/twitterglobe.git
 ```
 
 Create a Twitter app and PubNub account:
