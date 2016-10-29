@@ -1,4 +1,4 @@
-tweetglobe
+twitterglobe
 ==========
 
 A real-time 3D visualization of Tweets from around the world.
