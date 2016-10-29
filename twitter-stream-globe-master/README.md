@@ -28,17 +28,6 @@ Create a Twitter app and PubNub account:
 
 Create a `config.json` file using `config.sample.json` as a template. Fill in your Twitter App API and PubNub keys.
 
-Optionally, install the [Compass](http://compass-style.org/) Ruby Gem.
-
-```
-gem install compass
-```
-
-If you do not want Compass support, comment out this line in app.js
-
-```
-// app.use(require('node-compass')({mode: 'compress'}));
-```
 
 Install node module dependencies:
 
