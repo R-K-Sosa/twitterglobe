@@ -24,7 +24,7 @@ https://github.com/twitterdev/twitter-stream-globe.git
 Create a Twitter app and PubNub account:
 
 - Create a [Twitter application](https://apps.twitter.com).
-- Create a [PubNub account](https://admin.pubnub.com/#signup) (it's free).
+- Create a [PubNub account](https://admin.pubnub.com/#signup).
 
 Create a `config.json` file using `config.sample.json` as a template. Fill in your Twitter App API and PubNub keys.
 
