@@ -1,0 +1,9 @@
+{
+	"TWITTER_CONSUMER_KEY": "your-twitter-app-consumer-key",
+	"TWITTER_CONSUMER_SECRET": "your-twitter-app-consumer-secret",
+	"TWITTER_ACCESS_TOKEN": "your-twitter-access-token",
+	"TWITTER_TOKEN_SECRET": "your-twitter-token-secret",
+	"PUBNUB_PUBLISH_KEY": "your-publish-key",
+	"PUBNUB_SUBSCRIBE_KEY": "your-pubnub-subscribe-key",
+	"GA_TRACKING_ID": "your-google-analytics-id-optional"
+}

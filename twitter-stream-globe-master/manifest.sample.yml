@@ -1,0 +1,12 @@
+---
+applications:
+- name: twitterglobe
+  memory: 256M
+  instances: 1
+  env:
+    TWITTER_CONSUMER_KEY: your-consumer-key
+    TWITTER_CONSUMER_SECRET: your-consumer-secret
+    TWITTER_ACCESS_TOKEN: your-access-token
+    TWITTER_TOKEN_SECRET: your-access-token-secret
+    PUBNUB_PUBLISH_KEY: your-publish-key
+    PUBNUB_SUBSCRIBE_KEY: your-subscribe-key

@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+var debug = require('debug')('twitter-stream-globe');
+var app = require('../app');
+var nconf = require('nconf');
+
+// First, read values from the system environment:
+nconf.env();
+// You can override system env config values here:
+nconf.file({ file: 'config.json' });
+// else:
+nconf.defaults({
+  'PORT': process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 3000,
+  'BIND_IP': process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
+});
+app.set('port', nconf.get("PORT"));
+
+var server = app.listen(nconf.get("PORT"), nconf.get("BIND_IP"), function() {
+  debug('Express server listening on '+server.address().address+', port ' + server.address().port);
+});

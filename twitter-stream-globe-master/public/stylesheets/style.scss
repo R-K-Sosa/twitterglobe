@@ -1,0 +1,254 @@
+@import "compass/css3";
+@import "compass/reset";
+
+$twitter-color: #55ACEE;
+$panel-color: #222;
+$color-negative: #FF0000;
+$color-positive: #DDDD00;
+$color-neutral: #444;
+$color-text: #CCC;
+$panel-border: 5px solid #333;
+
+body {
+	font-family: 'Lato';
+  background-color: #000;
+  color: $color-text;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+  margin: 0;
+  color: $twitter-color;
+  letter-spacing: 2px;
+	font-size: 18px;
+}
+
+a {
+	text-decoration: none;
+	color: $color-text;
+}
+
+.text-pipe {
+	margin: 0 10px;
+}
+
+#header {
+	background-color: #222;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 55px;
+	opacity: 0.75;
+
+	h1 {
+		float: left;
+	  color: $twitter-color;
+		font-size: 28px;
+		margin: 0 0 0 20px;
+	  line-height: 55px;
+		background: url('../images/Twitter_logo_blue_small.png');
+		background-repeat: no-repeat;
+		background-position: 0px 18px;
+		padding-left: 35px
+	}
+
+	span#twitter-dev {
+		float: right;
+		font-size: 18px;
+	  color: $twitter-color;
+	  line-height: 55px;
+		margin: 0 25px 0 0;
+
+		a {
+	  	color: $twitter-color;
+		}
+	}
+}
+
+#globe-holder {
+	position: absolute;;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+#tweet-hud {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	padding: 20px;
+
+	.hud-panel {
+		position: absolute;
+		top: 75px;
+		bottom: 20px;
+		width: 400px;
+		opacity: 0.75;
+	}
+
+	#left-panel {
+		left: 20px;
+		text-align: left;
+	}
+
+	#right-panel {
+		right: 20px;
+		text-align: right;
+
+		div {
+			float: right;
+		}
+	}
+
+	#logo-holder {
+		position: absolute;
+		bottom: 20px;
+		right: 15px;
+
+		#pubnub-logo {
+			position: relative;
+			top: -3px;
+			height: 22px;
+			width: auto;
+			opacity: 0.65;
+			margin-right: 5px;
+		}
+
+		#html5-logo {
+			position: relative;
+			top: 0px;
+			height: 25px;
+			width: auto;
+			opacity: 0.65;
+		}
+
+		#nodejs-logo {
+			position: relative;
+			top: 4px;
+			height: 45px;
+			width: auto;
+			opacity: 0.65;
+		}
+	}
+}
+
+.sub-panel {
+	background-color: $panel-color;
+	padding: 10px;
+	width: 220px;
+	margin-bottom: 1px;
+	border-right: $panel-border;
+}
+
+
+#trends-panel {
+
+	h2 {
+		margin: 0 0 5px 0;
+	}
+
+	li.trend-item {
+		font-size: 12px;
+		height: 18px;
+		line-height: 18px;
+		list-style-type: none;
+	}
+
+}
+
+#sentiment-value {
+	font-family: 'Share Tech Mono';
+	font-size: 64px;
+	line-height: 64px;
+	font-weight: 300;
+}
+
+#sentiment-value.negative {
+	color: $color-negative;
+}
+
+#sentiment-value.positive {
+	color: $color-positive;
+}
+
+#line-chart-panel {
+	width: 220px;
+	height: 120px;
+	overflow: hidden;
+	
+	.content {
+		position: relative;
+		width: 100%;
+		height: 119px;
+		overflow: hidden;
+	}
+
+	#line-chart {
+		width: 263px;
+		height: 150px;
+	}
+}
+
+.tweet-item {
+	position: relative;
+	width: 220px;
+	height: 25px;
+	overflow: hidden;
+	background-color: $panel-color;
+	margin: 0 0 1px 0;
+	border-left: $panel-border;
+
+	img {
+		height: 25px;
+		width: 25px;
+		margin: 0 5px 0 1px;
+		opacity: 0.75;
+	}
+	
+	.text {
+		position: relative;
+		top: -8px;
+		font-size: 12px;
+	}
+
+	&.negative {
+		border-color: $color-negative;
+	}
+
+	&.positive {
+		border-color: $color-positive;
+	}
+}
+
+#github {
+	font-size: 12px;
+	color: #666;
+
+	a {
+		color: $twitter-color;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+#upgrade {
+	h1 {
+		font-size: 32px;
+		margin-bottom: 10px;
+	}
+	
+	a {
+		color: #55ACEE;
+		text-decoration: underline;
+	}
+	
+	margin: 50px;
+	font-weight: 300;
+}

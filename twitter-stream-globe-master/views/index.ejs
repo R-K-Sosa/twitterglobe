@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TweetGlobe">
+  <head>
+    <meta charset="utf-8">
+    <title>The Pulse of the Planet</title>
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="@TwitterDev" />
+    <meta property="twitter:title" content="The Pulse of the Planet" />
+    <meta property="twitter:description" content="A real-time 3D visualization of Tweets from around the world." />
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/twitterdev/twitter-stream-globe/master/screenshot.png" />
+    <meta property="twitter:url" content="http://twitter-stream-globe.herokuapp.com" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The Pulse of the Planet" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/twitterdev/twitter-stream-globe/master/screenshot.png" />
+    <meta property="og:description" content="A real-time 3D visualization of Tweets from around the world." />
+    <meta property="og:url" content="http://twitter-stream-globe.herokuapp.com" />
+    <meta property="og:site_name" content="The Pulse of the Planet" />
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700|Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='shortcut icon' href='/images/Twitter_logo_blue_small.png' />
+
+    <script src="//platform.twitter.com/widgets.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pubnub/3.6.3/pubnub.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"/></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular-resource.min.js"></script>
+    <script src="/vendor/pubnub-angular/lib/pubnub-angular.js"></script>
+    <script src="//js.leapmotion.com/leap-0.6.3.min.js"></script>
+    <script src="//js.leapmotion.com/leap-plugins-0.1.9.js"></script>
+
+    <script>
+      // PubNub config rendered server side so that config is in one place
+      var pubnubConfig = {
+        subscribe_key: '<%= subscribe_key %>',
+        channel: '<%= channel %>'
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <!-- Container for the Three.js scene -->
+    <div id="globe-holder"></div>
+
+    <!-- Container for the Angular application -->
+    <div id="tweet-hud" ng-controller="TweetHud">
+
+      <div id="header">
+        <h1>The Pulse of the Planet</h1>
+        <span id="twitter-dev"><a href="https://dev.twitter.com">dev.twitter.com</a><span class="text-pipe">|</span><a href="https://twitter.com/intent/user?screen_name=TwitterDev">@TwitterDev</a></span>
+      </div>
+
+      <div id="left-panel" class="hud-panel">
+        <div>
+
+          <!-- Repeats for every Tweet in the $scope.tweets model -->
+          <div ng-repeat="tweet in tweets" class="tweet-item {{tweet.sentiment.state}}">
+            <img ng-src="{{tweet.user.profile_image_url}}" />
+            <span class="text"><a href="{{tweet.user.profile_image_url}}" target="_blank">@{{tweet.user.screen_name}}</a></span>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="right-panel" class="hud-panel">
+        <div id="sentiment-panel" class="sub-panel">
+          <h2>Tweet Sentiment</h2>
+
+          <!-- Bind to $scope.avgSentiment model -->
+          <span id="sentiment-value" class="{{sentimentState}}">{{avgSentiment}}</span>
+
+        </div>
+
+        <div id="trends-panel" class="sub-panel">
+          <h2>Trends</h2>
+          <ul>
+
+            <!-- Repeats for every trend in the $scope.trends model -->
+            <li ng-repeat="trend in trends" class="trend-item">
+              <a href="{{trend.url}}" target="_blank">{{trend.name}}</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="sub-panel">
+          <span id="github">Source available on <a href="https://github.com/twitterdev/twitter-stream-globe">GitHub</a></span>
+        </div>
+      </div>
+
+      <div id="logo-holder">
+        <img id="pubnub-logo" src="/images/pubnub.png" />
+        <img id="html5-logo" src="/images/html5-badge-h-connectivity-graphics.png" />
+        <img id="nodejs-logo" src="/images/logo.svg" />
+      </div>
+    </div>
+
+    <script src="/javascripts/shaders.js"></script>
+    <script src="/javascripts/TweetBeacon.js"></script>
+    <script src="/javascripts/LeapController.js"></script>
+    <script src="/javascripts/TwitterStreamGlobe.js"></script>
+    <script src="/javascripts/TweetHud.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '<%= ga_tracking_id %>', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

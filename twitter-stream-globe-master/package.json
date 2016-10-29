@@ -1,0 +1,28 @@
+{
+  "name": "twitter-stream-globe",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "main": "bin/www",
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "debug": "~0.7.4",
+    "ejs": "~0.8.5",
+    "express": "~4.2.0",
+    "moment": "^2.8.2",
+    "morgan": "~1.0.0",
+    "nconf": "^0.6.9",
+    "node-compass": "0.2.3",
+    "pubnub": "^3.6.7",
+    "sentiment": "^1.0.1",
+    "serve-favicon": "^2.0.0",
+    "twit": "^1.1.18"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}

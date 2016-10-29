@@ -1,0 +1,19 @@
+{
+  "name": "tweet-globe",
+  "version": "0.0.0",
+  "authors": [
+    "Jonathan Cipriano <jcipriano@twitter.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pubnub-angular": "~1.1.0"
+  }
+}
