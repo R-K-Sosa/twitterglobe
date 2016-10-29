@@ -77,3 +77,4 @@ Resources
 - [AngularJS](https://angularjs.org/)
 - [PubNub AngularJS SDK](https://github.com/pubnub/pubnub-angular)
 - [Three.js](http://threejs.org/)
+- https://integrity.mit.edu/handbook/writing-code
