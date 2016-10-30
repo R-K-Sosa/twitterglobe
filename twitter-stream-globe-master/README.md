@@ -8,12 +8,6 @@ This web app attaches to the Twitter API stream/filter and runs rudimentary sent
 Inspired by the [Web GL Globe Chrome Experiment](http://www.chromeexperiments.com/globe) and the [PubNub Real-Time WebGL Visualization](http://www.pubnub.com/blog/creating-real-time-webgl-visualizations/).
 
 ![Screenshot](screenshot.png?raw=true =858x "Screenshot")
-[Video Capture](https://vimeo.com/104759844) | [Running Demo](http://twitter-stream-globe.herokuapp.com/) (Availability of this server may fluctuate)
-
-Installing and Running
-----
-
-Install [Node.js](http://nodejs.org/).
 
 Clone GitHub repo:
 
@@ -28,6 +22,21 @@ Create a Twitter app and PubNub account:
 
 Create a `config.json` file using `config.sample.json` as a template. Fill in your Twitter App API and PubNub keys.
 
+Installing and Running
+----
+Install [Node.js]:
+
+-Installed/checked Homebrew package manager on a Mac
+-Installed/checked XCode
+-Installed/checked XCode Command Line Tools 
+-Installed/checked Node JS and NPM (using Homebrew)
+-Created/executed app to test if Node JS is running/working on Mac
+
+-Signed up for a Gemfury account and uploaded a few npm packages to install them via command-line or as package.json dependencies.
+
+-Updated npm config:
+“npm config set registry https://npm.fury.io/username/”
+“npm install” still produced “npm ERR! 403 Forbidden” every time I made an attempt
 
 Install node module dependencies:
 
@@ -46,7 +55,7 @@ Go to [http://localhost:3000](http://localhost:3000) in your browser.
 
 Deploying
 ---
-This application is ready to run on Heroku.
+Run application on Heroku.
 
 **Heroku**
 
