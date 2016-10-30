@@ -5,4 +5,5 @@
 	"TWITTER_TOKEN_SECRET": "YkqSLUdi1OZp7ICsMOSb0lIkfZUnu40BksRNhjMSzgTTd",
 	"PUBNUB_PUBLISH_KEY": "pub-c-5d03ead4-aa4e-4a4b-977c-2cefedae8b6b",
 	"PUBNUB_SUBSCRIBE_KEY": "sub-c-248e8f6c-9dfd-11e6-949a-02ee2ddab7fe",
+	"GA_TRACKING_ID": "your-google-analytics-id-optional"
 }
