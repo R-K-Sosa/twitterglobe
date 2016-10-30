@@ -1,5 +1,5 @@
 {
-  "name": "3D Tweet Globe",
+  "name": "Twitter Stream Globe",
   "description": "A real-time 3D visualization of Tweets around the world. Uses three.js (WebGL), Angular & PubNub.",
   "repository": "https://github.com/R-K-Sosa/twitterglobe.git",
   "logo": "http://twitter-stream-globe.herokuapp.com/images/Twitter_logo_blue_small.png",
